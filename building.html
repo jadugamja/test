@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <script src="https://code.jquery.com/jquery-1.12.4.js" 
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+        
+        <!-- 위경도 37.48541, 126.87877의 현재 온도 -->
+        <script>
+            $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=37.48541&lon=126.87877&appid=ff9019a665c68568b085dd13ffe419a9&units=metric', function(result){
+                alert(result.main.temp);
+            });
+        </script>
+        
+        <!-- 빌딩 정보 -->
+        <script>
+            var building = {
+                "coordinate" : [
+                    {
+                        "lat1" : "37.48541",
+                        "lon1" : "126.87877"
+                    },
+                    {
+                        "lat2" : "37.36543",
+                        "lon2" : "127.123456"
+                    }
+                ],
+                "size" : [
+                    {
+                        "width1" : "100",
+                        "height1" : "500",
+                        "depth1" : "150"
+                    },
+                    {
+                        "width2" : "200",
+                        "height2" : "400",
+                        "depth2" : "120"
+                    }
+                ]
+            }
+        </script>
+
+        {
+            "coordinate" : [
+                {
+                    "lat1" : "37.48541",
+                    "lon1" : "126.87877"
+                },
+                {
+                    "lat2" : "37.36543",
+                    "lon2" : "127.123456"
+                }
+            ],
+            "size" : [
+                {
+                    "width1" : "100",
+                    "height1" : "500",
+                    "depth1" : "150"
+                },
+                {
+                    "width2" : "200",
+                    "height2" : "400",
+                    "depth2" : "120"
+                }
+            ]
+        }
+
+    </body>
+</html>
